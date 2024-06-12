@@ -3,9 +3,9 @@ import { SuiKit, SuiTxBlock } from '@scallop-io/sui-kit';
 import '@scallop-io/sui-kit-plugins';
 import * as process from "process";
 
-let suiKit = new SuiKit({secretKey: process.env.SECRET_KEY});
+let suiKit = new SuiKit({secretKey: String(process.env.SHINAMI_SECRET_KEY)});
 // init Shinami gas sponsor before using it
-suiKit.initShinamiGasSponsor(String(process.env.GAS_ACCESS_KEY));
+suiKit.initShinamiGasSponsor(String(process.env.SHINAMI_GAS_ACCESS_KEY));
 
 /**
  * This is an example of using sponsored transaction plugin in nodejs.
