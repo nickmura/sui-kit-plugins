@@ -37,6 +37,7 @@
     "src"
   ],
   "scripts": {
+    "test": "npx tsc && node ./dist/test.js",
     "clean": "rm -rf tsconfig.tsbuildinfo ./dist",
     "build": "npm run build:types && npm run build:tsup",
     "build:tsup": "tsup ./src/index.ts --format esm,cjs --sourcemap",
